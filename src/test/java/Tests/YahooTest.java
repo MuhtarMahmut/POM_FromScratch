@@ -11,7 +11,7 @@ public class YahooTest extends TestBase {
     public void firstTest() {
 
        driver.get("https://www.yahoo.com");
-        MyLibrary.TakeScreenshotsplease(driver,"myfirstpicture");
+        mylib.TakeScreenshotsplease("22223333");
 
     }
 

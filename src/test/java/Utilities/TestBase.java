@@ -12,11 +12,15 @@ public class TestBase {
 
 
    public WebDriver driver;
+   public MyLibrary mylib;
+
+
 
     @BeforeMethod
     public void setups(){
         WebDriverManager.chromedriver().setup();
         driver=new ChromeDriver();
+        mylib=new MyLibrary(driver);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
@@ -24,6 +28,7 @@ public class TestBase {
 
     @AfterMethod
     public void EndTest(){
+        mylib.sleep(3.5);
         driver.quit();
     }
 
