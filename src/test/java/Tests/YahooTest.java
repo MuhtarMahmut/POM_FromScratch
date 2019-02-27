@@ -2,7 +2,6 @@ package Tests;
 
 import Pages.Elements;
 import Utilities.TestBase;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -16,7 +15,7 @@ public class YahooTest extends TestBase {
 
     @Test(priority = 1)
     public void firstTest() {
-       act.pause(3000).perform();
+
 
     }
 
