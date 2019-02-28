@@ -9,7 +9,7 @@ public class ExcelReader {
     static XSSFSheet Sheet1;
     static {
         try {
-            FileInputStream file = new FileInputStream("MyExcel.xlsx");
+            FileInputStream file = new FileInputStream("src/test/java/Utilities/MyExcel.xlsx");
             XSSFWorkbook YahooCredentials = new XSSFWorkbook(file);
              Sheet1=YahooCredentials.getSheet("Sheet1");
         }catch (Exception e){ }
