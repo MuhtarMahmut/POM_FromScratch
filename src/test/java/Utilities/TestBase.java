@@ -1,8 +1,6 @@
 package Utilities;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
@@ -19,8 +17,7 @@ public class TestBase {
 
     @BeforeMethod
     public void setups(){
-        WebDriverManager.chromedriver().setup();
-        driver=new ChromeDriver();
+        driver=Driver.getDriver();
         mylib=new MyLibrary(driver);
         wait=new WebDriverWait(driver,50);
         act=new Actions(driver);
@@ -31,8 +28,8 @@ public class TestBase {
 
     @AfterMethod
     public void EndTest(){
-        mylib.sleep(3.5);
-        driver.quit();
+        mylib.sleep(3);
+       Driver.CloseDriver();
     }
 
 }

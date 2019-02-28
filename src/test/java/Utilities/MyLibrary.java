@@ -10,7 +10,6 @@ import java.util.List;
 
 public class MyLibrary {
     WebDriver driver;
-
     public MyLibrary(WebDriver driver){
             this.driver=driver;
     }
@@ -39,7 +38,7 @@ public class MyLibrary {
         TakesScreenshot mirzat=(TakesScreenshot)driver;
         File myfile=mirzat.getScreenshotAs(OutputType.FILE);
         try {
-            FileUtils.copyFile(myfile, new File("src/test/captures/"+SaveAs+".jpg"));
+            FileUtils.copyFile(myfile, new File("src/test/java/Utilities/captures/"+SaveAs+".jpg"));
         } catch (IOException e) {
             e.printStackTrace();
         }

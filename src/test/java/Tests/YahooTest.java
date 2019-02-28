@@ -15,7 +15,7 @@ public class YahooTest extends TestBase {
 
     @Test(priority = 1)
     public void firstTest() {
-
+     mylib.TakeScreenshotsplease("muhtar");
 
     }
 

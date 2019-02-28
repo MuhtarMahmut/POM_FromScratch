@@ -1,7 +1,7 @@
 package Pages;
 
+import Utilities.ExcelCredential;
 import Utilities.TestBase;
-import Utilities.configReader;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -23,17 +23,17 @@ public class Elements extends TestBase {
     WebElement password;
 
     public void loginprocess(){
-        driver.navigate().to(configReader.getinfo("WebsiteAddress"));
+        driver.navigate().to(ExcelCredential.WebSite);
 
         wait.until(ExpectedConditions.visibilityOf(signin));
         signin.click();
 
         wait.until(ExpectedConditions.visibilityOf(username));
-        username.sendKeys(configReader.getinfo("UserName") + Keys.ENTER);
+        username.sendKeys(ExcelCredential.UserName + Keys.ENTER);
 
 
         wait.until(ExpectedConditions.visibilityOf(password));
-        password.sendKeys(configReader.getinfo("PassWord")+Keys.ENTER);
+        password.sendKeys(ExcelCredential.Password+Keys.ENTER);
 
     }
 
