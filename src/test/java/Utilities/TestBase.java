@@ -16,9 +16,9 @@ public class TestBase {
    public MyLibrary mylib;
    public static WebDriverWait wait;
    public static Actions act;
-    public static ExtentReports reportDoc;
-    public static ExtentHtmlReporter file;
-    public static ExtentTest Test;
+   public static ExtentReports reportDoc;
+   public static ExtentHtmlReporter file;
+   public static ExtentTest Test;
 
     @BeforeMethod
     public void setups(){
