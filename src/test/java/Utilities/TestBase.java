@@ -28,9 +28,7 @@ public class TestBase {
         act=new Actions(driver);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
     }
-
 
     @AfterMethod
     public void AA(ITestResult result){
