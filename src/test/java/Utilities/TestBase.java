@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 public class TestBase {
 
    public static WebDriver driver;
-   public MyLibrary mylib;
+   public static MyLibrary mylib;
    public static WebDriverWait wait;
    public static Actions act;
    public static ExtentReports reportDoc;
